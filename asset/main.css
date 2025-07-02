@@ -1,0 +1,116 @@
+/* ---------------------------------- product-page ---------------------------------- */
+
+/* .product-page {
+}
+.product-section {
+    display: flex;
+    gap: 40px;
+} */
+/* .product-section .product-album{}  */
+/* .product-section .product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.product-section .info-block:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.product-section .info-block:nth-child(2) {
+}
+.product-section .info-block:nth-child(3) {
+}
+.product-section .info-tags {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.tag-new {
+}
+.tag-new img {
+}
+.tag-rating {
+    position: relative;
+}
+.tag-rating img {
+}
+.tag-rating span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.product-section .info-title {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.product-section .info-title h1 {
+}
+.product-section .info-title span {
+    text-transform: uppercase;
+}
+
+.product-section .info-marketing {
+    display: grid;
+    grid-template-columns: 1fr 20px 1fr;
+    gap: 5px;
+}
+.product-section .info-marketing span {
+}
+.product-section .info-marketing img {
+}
+.product-section .info-marketing__button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.product-section .info-marketing__button span {
+    text-transform: uppercase;
+}
+.product-section .info-marketing__button img {
+}
+.product-section .info-line {
+    background-color: #0000001f;
+    height: 1px;
+    width: 100%;
+}
+.product-section .info-sell {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.product-section .info-sell__top {
+    display: flex;
+    justify-content: space-between;
+}
+.product-section .info-price {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.product-section .info-price__old {
+    text-decoration: line-through;
+    color: var(--black-promary);
+}
+.product-section .info-price__actually {
+}
+.product-section .info-price__old {
+}
+.product-section .info-sell__bottom {
+    text-align: end;
+}
+@media ((max-width: 480px)) {
+    .product-section .product-info {
+        gap: 20px;
+    }
+    .product-section .info-block:first-child {
+        gap: 12px;
+    }
+} */
+
+/* ---------------------------------- profile-page ---------------------------------- */
