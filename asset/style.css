@@ -235,6 +235,15 @@ input {
     padding: 16px 17px;
     background-color: var(--black-promary);
 }
+
+.text-links {
+    font-family: Barlow;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
 .text-title {
     font-family: "Gambetta Variable";
     font-weight: 500;
@@ -246,11 +255,13 @@ input {
     font-size: 20px;
     line-height: 28px;
 }
+
 .text14 {
     font-size: 14px;
     line-height: 24px;
 }
 .text16 {
+    color: var(--black-promary);
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -282,7 +293,53 @@ input {
         font-size: 32px;
     }
 }
+/* custom checkbox */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    gap: 12px;
+}
 
+.checkbox-wrapper input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--black-Secondary);
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s;
+    background-color: var(--chalk);
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: var(--green);
+    border-color: var(--green);
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + .custom-checkbox::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-label {
+    color: var(--black-promary);
+    font-weight: 400;
+
+    font-family: sans-serif;
+}
 /* colors */
 
 /* ---------------------------------- header ---------------------------------- */
