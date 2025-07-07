@@ -115,8 +115,8 @@
 
 /* ---------------------------------- profile-page ---------------------------------- */
 
-.profile-page {
-}
+.profile-page {}
+
 .profile-page .container {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -125,6 +125,7 @@
 }
 
 .profile-page .button-content {
+    text-align: center;
     width: fit-content;
     font-weight: 600;
     text-transform: uppercase;
@@ -134,15 +135,18 @@
     transition: var(--transition-time);
     cursor: pointer;
 }
+
 .profile-page .button-content:hover {
     border-color: var(--green);
     transform: scale(1.02);
 }
+
 .profile-page .switcher {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
+
 .profile-page .switcher-item {
     display: flex;
     align-items: center;
@@ -155,74 +159,90 @@
     cursor: pointer;
     transition: var(--transition-time);
 }
+
 .profile-page .switcher-item:hover {
     transform: scale(1.02);
     border-color: var(--green);
     color: var(--green);
 }
+
 .profile-page .switcher-item[active-tab__key] {
     border-color: var(--green);
     color: var(--green);
 }
+
 .profile-page .switcher-item span {
     text-wrap: nowrap;
     font-weight: 400;
     text-transform: uppercase;
 }
+
 .profile-page .switcher-content {
     display: none;
 }
+
 .profile-page .switcher-content[active-tab__content] {
     display: block;
 }
+
 .profile-page__right {
     display: flex;
     flex-direction: column;
     gap: 40px;
     width: 100%;
 }
+
 .profile-page h1 {
     color: var(--black-promary);
 }
+
 .profile-page .line {
     background-color: var(--black-Secondary);
     height: 1px;
     width: 100%;
 }
+
 .profile-page .personal-info {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
+
 .profile-page .personal-info__title {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .profile-page .personal-info__title span {
     text-transform: uppercase;
     font-weight: 600;
     color: var(--black-promary);
 }
+
 .profile-page .personal-info__title h3 {
     color: var(--green);
 }
+
 .profile-page .personal-info__info {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
+
 .profile-page .info-block {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
+
 .profile-page .info-block__title {
     font-weight: 500;
 }
-.profile-page .info-block__data {
-}
+
+.profile-page .info-block__data {}
+
 .profile-page .personal-info__buttons {
     display: flex;
     gap: 20px;
@@ -234,9 +254,11 @@
     grid-template-columns: 1fr 1px 1fr;
     gap: 80px;
 }
-.profile-page .payment-cards > div {
+
+.profile-page .payment-cards>div {
     width: 100%;
 }
+
 .profile-page .payment-cards__title {
     margin-bottom: 20px;
     font-weight: 600;
@@ -249,6 +271,7 @@
     flex-wrap: wrap;
     margin-bottom: 32px;
 }
+
 .profile-page .card-payment {
     min-width: 180px;
     padding: 12px 16px;
@@ -260,33 +283,40 @@
     cursor: pointer;
     transition: var(--transition-time);
 }
+
 .profile-page .card-payment:hover {
     border-color: var(--green);
     transform: scale(1.02);
 }
+
 .profile-page .card-payment img {
     width: 39px;
     height: 25px;
 }
+
 .profile-page .card-payment span {
     font-weight: 600;
     text-transform: uppercase;
 }
+
 .profile-page .line__vertical {
     height: 100%;
     width: 1px;
     background-color: var(--black-Secondary);
 }
+
 .profile-page .settings {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .profile-page .settings-block {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
+
 .profile-page .button-save {
     /* font-family: RO; */
     color: var(--white);
@@ -302,11 +332,160 @@
     border: 1px solid var(--black-promary);
     cursor: pointer;
 }
+
 .profile-page .button-save:hover {
     transform: scale(1.02);
     border-color: var(--green);
 }
-@media ((max-width: 840px)) {
+
+/* section favorite */
+.profile-page .favorite-list {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.profile-page .favorite-list__item {}
+
+.profile-page .favorite-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-page .favorite-bottom .button-content {
+    min-width: 352px;
+}
+
+.profile-page .pagination {}
+
+/* section order */
+
+.profile-page .order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.profile-page .order-list_item {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border-radius: 8px;
+    background-color: var(--milk);
+    padding: 20px 20px 40px 20px;
+}
+
+.profile-page .order-item__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.profile-page .order-item__left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-page .order-item_date {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profile-page .order-item_date div {
+    font-weight: 500;
+}
+
+.profile-page .order-item_date span {
+    font-weight: 400;
+}
+
+.profile-page .order-item_count {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profile-page .order-item_count div {}
+
+.profile-page .order-item_count span {}
+
+
+.profile-page .order-item__right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.profile-page .order-item_status {}
+
+.profile-page .order-item_status img {
+    width: 142px;
+    height: 40px;
+}
+
+.profile-page .order-item_price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-page .order-item_basket {}
+
+.profile-page .order-item_seeMore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--black-Secondary);
+    transition: var(--transition-time);
+}
+
+.profile-page .order-item_seeMore .icon-arrow-up {
+    transition: var(--transition-time);
+}
+
+.profile-page .order-item_seeMore:hover {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.dropdown[dropdown-active] .icon-arrow-up {
+    transform: rotate(180deg);
+}
+
+
+
+.profile-page .order-item__body {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media ((max-width: 1440px)) {
+    .profile-page .favorite-list {
+
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media ((max-width: 1000px)) {
     .profile-page .container {
         display: flex;
         flex-direction: column;
@@ -317,37 +496,94 @@
         overflow: auto;
         padding-bottom: 5px;
     }
+
     .profile-page .switcher-item {
         width: fit-content;
     }
+
     .profile-page .switcher-item:hover {
         transform: scale(1);
     }
+
     .profile-page__right {
         gap: 32px;
     }
+
     .profile-page .payment-cards {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
+
     .profile-page .card-payment {
         min-width: fit-content;
     }
+
     .profile-page .line__vertical {
         height: 1px;
         width: 100%;
     }
+
+    .profile-page .favorite-list {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-page .favorite-bottom {
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
 }
-@media ((max-width: 480px)) {
+
+@media ((max-width: 560px)) {
     .profile-page .container {
         gap: 40px;
     }
+
     .profile-page .personal-info__info {
         flex-direction: column;
     }
+
     .profile-page .personal-info__buttons {
         flex-direction: column;
     }
+
+    .profile-page .favorite-list {
+
+        grid-template-columns: 1fr;
+    }
+
+    .profile-page .favorite-bottom {
+        gap: 32px;
+    }
+
+    .profile-page .favorite-bottom .button-content {
+        min-width: 100%;
+    }
+
+    .profile-page .order-list_item {
+        gap: 24px;
+        padding: 20px 16px 40px 16px;
+    }
+
+    .profile-page .order-item__left {
+        justify-content: space-between;
+    }
+
+    .profile-page .order-item__head {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .profile-page .order-item__right {
+        justify-content: space-between;
+        gap: 13px;
+    }
+
+    .profile-page .order-item_status img {
+        width: 115px;
+    }
 }
+
 /* ---------------------------------- profile-page ---------------------------------- */
