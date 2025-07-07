@@ -10,7 +10,7 @@
     --chalk: #ece6de;
     --milk: #e2d8c9;
     --green: #6d9750;
-    --black-promary: #222;
+    --black-promary: #222222;
     --black-Secondary: rgba(34, 34, 34, 0.12);
     --gray: rgba(255, 255, 255, 0.12);
     /* Разное */
@@ -93,7 +93,7 @@ img {
 }
 
 /* Указываем понятную периодичность в потоке данных у article*/
-article>*+* {
+article > * + * {
     margin-top: 1em;
 }
 
@@ -182,7 +182,8 @@ p {
     } */
 }
 
-@media ((max-width: 570px)) {}
+@media ((max-width: 570px)) {
+}
 
 .wrapper {
     /*  */
@@ -265,8 +266,15 @@ input {
     font-weight: 600;
     font-size: 20px;
     line-height: 28px;
+    text-transform: uppercase;
 }
-
+.text-hero {
+    font-family: Gambetta Variable;
+    font-weight: 600;
+    font-style: Semibold;
+    font-size: 32px;
+    line-height: 44px;
+}
 .text14 {
     font-size: 14px;
     line-height: 24px;
@@ -296,7 +304,6 @@ input {
 }
 
 @media ((max-width: 570px)) {
-
     /* section {
     padding: 8px 0;
   } */
@@ -335,12 +342,12 @@ input {
     background-color: var(--chalk);
 }
 
-.checkbox-wrapper input[type="checkbox"]:checked+.custom-checkbox {
+.checkbox-wrapper input[type="checkbox"]:checked + .custom-checkbox {
     background-color: var(--green);
     border-color: var(--green);
 }
 
-.checkbox-wrapper input[type="checkbox"]:checked+.custom-checkbox::after {
+.checkbox-wrapper input[type="checkbox"]:checked + .custom-checkbox::after {
     content: "";
     position: absolute;
     left: 5px;
@@ -520,6 +527,17 @@ input {
     margin-top: 32px;
 }
 
+/* ---------------------------------- components ---------------------------------- */
+
+.dropdown-body {
+    overflow: hidden;
+    max-height: 0;
+
+    transition: var(--transition-time);
+}
+.dropdown[dropdown-active] .dropdown-body {
+    max-height: 3000px;
+}
 /* ---------------------------------- footer ---------------------------------- */
 .footer {
     display: flex;

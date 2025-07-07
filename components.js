@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pageProfile = document.querySelector(".profile-page");
     if (pageProfile) {
         switcherLogic();
+        dropdownLogic();
     }
 });
 function switcherLogic() {
@@ -39,4 +40,21 @@ function switcherLogic() {
             }
         });
     }
+}
+function dropdownLogic() {
+    const attrDropdownActive = "dropdown-active";
+    const dropdownBlockNodes = document.querySelectorAll(".dropdown");
+    dropdownBlockNodes.forEach((dropdownNode) => {
+        const buttonOpenNode = dropdownNode.querySelector(".dropdown__open");
+
+        buttonOpenNode.addEventListener("click", () => {
+            const stateDropdown = dropdownNode.getAttribute(attrDropdownActive);
+           
+            if (stateDropdown === '') {
+                dropdownNode.removeAttribute(attrDropdownActive);
+            } else {
+                dropdownNode.setAttribute(attrDropdownActive, "");
+            }
+        });
+    });
 }
