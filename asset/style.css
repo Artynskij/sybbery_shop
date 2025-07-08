@@ -275,6 +275,13 @@ input {
     font-size: 32px;
     line-height: 44px;
 }
+.text12 {
+    font-weight: 400;
+
+    font-size: 12px;
+
+    line-height: 100%;
+}
 .text14 {
     font-size: 14px;
     line-height: 24px;
