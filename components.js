@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (pageProfile) {
         switcherLogic();
         dropdownLogic();
+        profilePageButtonLogic();
     }
 });
 function switcherLogic() {
@@ -49,12 +50,33 @@ function dropdownLogic() {
 
         buttonOpenNode.addEventListener("click", () => {
             const stateDropdown = dropdownNode.getAttribute(attrDropdownActive);
-           
-            if (stateDropdown === '') {
+
+            if (stateDropdown === "") {
                 dropdownNode.removeAttribute(attrDropdownActive);
             } else {
                 dropdownNode.setAttribute(attrDropdownActive, "");
             }
         });
+    });
+}
+function profilePageButtonLogic() {
+    const blockProfileMain = document.querySelector(".profile__main");
+    const blockForm = document.querySelector(".profile-page_form");
+    const buttonChangeInfo = document.querySelector(".button__change-info");
+
+    const buttonCancelForm = document.querySelector(".button-cancel__form");
+    const buttonSaveForm = document.querySelector(".button-save__form");
+
+    buttonChangeInfo.addEventListener("click", () => {
+        blockForm.setAttribute("active", "");
+        blockProfileMain.removeAttribute("active");
+    });
+    buttonCancelForm.addEventListener("click", () => {
+        blockProfileMain.setAttribute("active", "");
+        blockForm.removeAttribute("active");
+    });
+    buttonSaveForm.addEventListener("click", () => {
+        blockProfileMain.setAttribute("active", "");
+        blockForm.removeAttribute("active");
     });
 }
