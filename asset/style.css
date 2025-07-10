@@ -139,9 +139,9 @@ body {
     padding: 0 40px;
 }
 
-section:first-child {
+/* section:first-child {
     margin-top: 80px;
-}
+} */
 
 section {
     padding: 80px 0;
@@ -544,6 +544,28 @@ input {
 }
 .dropdown[dropdown-active] .dropdown-body {
     max-height: 3000px;
+}
+.line {
+    background-color: var(--black-Secondary);
+    height: 1px;
+    width: 100%;
+}
+.form-input__block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form-input__block label {
+    font-weight: 500;
+    color: var(--black-promary);
+    cursor: pointer;
+}
+.form-input__block input {
+    font-weight: 400;
+    padding: 18px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--black-Secondary);
+    background-color: var(--chalk);
 }
 /* ---------------------------------- footer ---------------------------------- */
 .footer {

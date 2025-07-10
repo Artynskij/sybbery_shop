@@ -1,6 +1,7 @@
 @font-face {
     font-family: "icomoon";
-    src: url("icomoon.woff?5eti51") format("woff");
+    src: url("icomoon.woff?82o9m6") format("woff");
+
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -22,6 +23,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-search:before {
+    content: "\e904";
+}
+.icon-lock:before {
+    content: "\e905";
+}
+.icon-share:before {
+    content: "\e906";
+}
+.icon-eye:before {
+    content: "\e907";
+}
 .icon-cart:before {
     content: "\e900";
 }
