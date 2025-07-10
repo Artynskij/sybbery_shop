@@ -1,9 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     const pageProfile = document.querySelector(".profile-page");
+    const pageSighup = document.querySelector(".sighup-page");
+    const pageSighin = document.querySelector(".sighin-page");
     if (pageProfile) {
         switcherLogic();
         dropdownLogic();
         profilePageButtonLogic();
+    }
+    if (pageSighup && !pageSighin) {
+        sighupPageButtonLogic();
+        sighupPAgeInputSmsLogic();
+    }
+    if (pageSighin) {
+        sighinPageEyePasswordLogic();
     }
 });
 function switcherLogic() {
@@ -78,5 +87,57 @@ function profilePageButtonLogic() {
     buttonSaveForm.addEventListener("click", () => {
         blockProfileMain.setAttribute("active", "");
         blockForm.removeAttribute("active");
+    });
+}
+function sighupPageButtonLogic() {
+    const buttonContinue = document.querySelector(".sighup-button__continue");
+    const buttonConfirm = document.querySelector(".sighup-button__confirm");
+    const sighupLogicBlocks = document.querySelectorAll(".sighup__logic");
+    const inputSmsFirst = document.querySelector("#sms-code input");
+    const stepFirstBlock = sighupLogicBlocks[0];
+    const stepSecondBlock = sighupLogicBlocks[1];
+    buttonContinue.addEventListener("click", () => {
+        stepFirstBlock.removeAttribute("active");
+        stepSecondBlock.setAttribute("active", "");
+        inputSmsFirst.focus();
+    });
+    buttonConfirm.addEventListener("click", () => {
+        stepSecondBlock.removeAttribute("active");
+        stepFirstBlock.setAttribute("active", "");
+    });
+}
+function sighupPAgeInputSmsLogic() {
+    const inputs = document.querySelectorAll("#sms-code input");
+    const buttonSubmit = document.querySelector(".sighup-button__confirm");
+    inputs.forEach((input, index) => {
+        input.addEventListener("input", () => {
+            input.value = input.value.replace(/[^0-9]/g, "").slice(0, 1);
+            if (input.value && index < inputs.length) {
+                if (index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                } else {
+                    buttonSubmit.focus();
+                }
+            }
+        });
+
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Backspace" && !input.value && index > 0) {
+                inputs[index - 1].focus();
+            }
+        });
+    });
+}
+
+function sighinPageEyePasswordLogic() {
+    const inputPassword = document.querySelector(
+        ".sighup-block__password input"
+    );
+    const buttonSeePassword = document.querySelector(
+        ".sighup-block__password .button-see-password"
+    );
+    buttonSeePassword.addEventListener("click", () => {
+        const isPassword = inputPassword.type === "password";
+        inputPassword.type = isPassword ? "text" : "password";
     });
 }
