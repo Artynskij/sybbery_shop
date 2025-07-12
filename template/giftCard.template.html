@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="../asset/main.css" />
 
         <link rel="stylesheet" href="../icon-font/icon-font.css" />
-        <title>Sign up</title>
+        <title>gift card</title>
     </head>
     <body>
         <header class="container mb-header">
@@ -117,134 +117,160 @@
                 </ul>
             </div>
         </header>
-        <main class="sighup-page">
-            <section>
-                <div active class="container sighup__logic">
-                    <div class="sighup-form">
-                        <form action="">
-                            <div class="form-title">
-                                <div class="form-title__step text-label">
-                                    Step 1/2
-                                </div>
-                                <h1>Create an account</h1>
-                                <div class="form-title__bottom text16">
-                                    Already have an account?
-                                    <a
-                                        href="./sighIn.template.html"
-                                        class="text-links"
-                                    >
-                                        Sign In
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="form__block">
-                                <label for="sighup-input_form-tel">phone</label>
-                                <input
-                                    id="sighup-input_form-tel"
-                                    placeholder="+0 (000) 000 00 00"
-                                    type="tel"
-                                />
-                            </div>
-                            <div class="line"></div>
-                            <div class="form-button__group text16">
-                                <button class="form-button__google">
-                                    <img
-                                        src="../image/google-icon__sighup.png"
-                                    />
-                                    <span>google</span>
-                                </button>
-                                <button class="form-button__apple">
-                                    <img
-                                        src="../image/apple-icon__sighup.png"
-                                    />
-                                    <span>AppleID</span>
-                                </button>
-                            </div>
-                            <div class="form-bottom">
-                                <button
-                                    type="button"
-                                    class="form-button__submit sighup-button__continue text16"
-                                >
-                                    Continue
-                                </button>
-                                <div class="form-bottom__bottom text16">
-                                    By joining, you agree to our
-                                    <a href="#Terms">Terms & Conditions</a> and
-                                    <a href="#Privacy">Privacy Policy</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="sighup-image">
-                        <!-- image-sighup.png -->
-                        <img src="../image/image-sighup.png" alt="image" />
-                    </div>
+        <main class="gift-card-page">
+            <section class="container">
+                <div class="gift-card-page__title-block">
+                    <button class="button-back">
+                        <div class="icon-arrow-up icon-arrow__left"></div>
+                        <span class="text-links">back</span>
+                    </button>
+                    <h1>Gift Card</h1>
+                    <button class="icon-share"></button>
                 </div>
-                <div class="container sighup__logic">
-                    <div class="sighup-form">
-                        <form action="">
-                            <div class="form-title">
-                                <div class="form-title__step text-label">
-                                    Step 2/2
-                                </div>
-                                <h1>Enter code from SMS</h1>
-                                <div class="form-title__bottom text16">
-                                    Already have an account?
-                                    <a
-                                        href="./sighIn.template.html"
-                                        class="text-links"
-                                    >
-                                        Sign In
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="line"></div>
-                            <div class="form-sms__list" id="sms-code">
-                                <input type="text" maxlength="1" />
-                                <input type="text" maxlength="1" />
-                                <input type="text" maxlength="1" />
-                                <input type="text" maxlength="1" />
-                                <input type="text" maxlength="1" />
-                                <input type="text" maxlength="1" />
-                            </div>
-
-                            <div class="line"></div>
-                            <div class="form-button__group text16">
-                                <button class="form-button__google">
-                                    <img
-                                        src="../image/google-icon__sighup.png"
-                                    />
-                                    <span>Sign UP with google</span>
-                                </button>
-                                <button class="form-button__apple">
-                                    <img
-                                        src="../image/apple-icon__sighup.png"
-                                    />
-                                    <span>Sign UP with AppleID</span>
-                                </button>
-                            </div>
-                            <div class="form-bottom">
-                                <button
-                                    class="form-button__submit sighup-button__confirm text16"
-                                >
-                                    Confirm
-                                </button>
-                                <div class="form-bottom__bottom text16">
-                                    By joining, you agree to our
-                                    <a href="#Terms">Terms & Conditions</a> and
-                                    <a href="#Privacy">Privacy Policy</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="sighup-image">
-                        <!-- image-sighup.png -->
-                        <img src="../image/image-sighup.png" alt="image" />
-                    </div>
+                <div class="gift-card-page__title-under text24">
+                    Share a gift card. Gift cards can be sent via email or
+                    printed at home.
                 </div>
+                <form class="gift-card-page__form" action="">
+                    <div class="form__block">
+                        <div class="select-custom text16">
+                            <div class="select-selected">
+                                <span>Choose option</span>
+                                <div
+                                    class="icon-arrow-up icon-arrow-down"
+                                ></div>
+                            </div>
+                            <div class="select-items">
+                                <div data-value="1">10 ton</div>
+                                <div data-value="2">5 blum</div>
+                                <div data-value="3">10000 pepe</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-radio__block">
+                        <div class="form-radio__block-title text-links">
+                            Delivery Method
+                        </div>
+                        <label class="radio-wrapper text16">
+                            Email — send a digital card directly to recipient
+                            <input
+                                type="radio"
+                                name="option"
+                                value="1"
+                                checked
+                            />
+                            <span class="custom-radio"></span>
+                        </label>
+                        <label class="radio-wrapper text16">
+                            Print at home — provide me a printable gift card
+                            <input type="radio" name="option" value="2" />
+                            <span class="custom-radio"></span>
+                        </label>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form__block-group-name">
+                        <div class="form__block text-links">From *</div>
+                        <div class="form__block">
+                            <label for="gift-card-input_form-first-name">
+                                First Name
+                            </label>
+                            <input
+                                id="gift-card-input_form-first-name"
+                                placeholder="First Name"
+                                type="text"
+                            />
+                        </div>
+                        <div class="form__block">
+                            <label for="gift-card-input_form-last-name">
+                                Last Name
+                            </label>
+                            <input
+                                id="gift-card-input_form-last-name"
+                                placeholder="Last Name"
+                                type="text"
+                            />
+                        </div>
+                        <div class="form__block">
+                            <label for="gift-card-input_form-mail">
+                                Your E-mail
+                            </label>
+                            <input
+                                id="gift-card-input_form-mail"
+                                placeholder="Email"
+                                type="email"
+                            />
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form__block-group">
+                        <div class="form__block">
+                            <label for="gift-card-input_form-Recipient-name">
+                                Recipient Name *
+                            </label>
+                            <input
+                                id="gift-card-input_form-Recipient-name"
+                                placeholder="Recipient Name"
+                                type="text"
+                            />
+                        </div>
+                        <div class="form__block">
+                            <label for="gift-card-input_form-Message">
+                                Message
+                            </label>
+                            <!-- <input
+                                id="gift-card-input_form-Message"
+                                placeholder="Message"
+                                type="text"
+                            /> -->
+                            <textarea
+                                name="gift-card-input_form-Message"
+                                id="gift-card-input_form-Message"
+                                placeholder="Message"
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form__block-group-card">
+                        <div class="form__block">
+                            <label for="card-number"> Card Number </label>
+                            <input
+                                id="card-number"
+                                placeholder="0000 0000 0000 0000"
+                                type="text"
+                            />
+                        </div>
+                        <div class="form__block">
+                            <label for="card-expiry"> MM/YY </label>
+                            <input
+                                id="card-expiry"
+                                placeholder="22/22"
+                                type="text"
+                                maxlength="5"
+                            />
+                        </div>
+                        <div class="form__block">
+                            <label for="card-cvc"> CVC </label>
+                            <input
+                                id="card-cvc"
+                                placeholder="CVC code"
+                                type="text"
+                                maxlength="3"
+                            />
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="form__info">
+                        <div class="icon-lock"></div>
+                        <span class="text16">
+                            We use SSL encryption to protect your information
+                        </span>
+                    </div>
+                    <button class="button-black button-order">
+                        Place order
+                    </button>
+                    <div></div>
+                </form>
             </section>
         </main>
         <footer class="footer container">

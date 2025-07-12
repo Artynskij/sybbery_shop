@@ -340,7 +340,7 @@
     gap: 20px;
     max-width: 600px;
 }
-.profile-page .profile_form-input__block:first-child {
+.profile-page .profile_form__block:first-child {
     grid-column: 1 /3;
 }
 
@@ -755,7 +755,7 @@
     .profile-page .profile_form-content {
         grid-template-columns: 1fr;
     }
-    .profile-page .profile_form-input__block:first-child {
+    .profile-page .profile_form__block:first-child {
         grid-column: initial;
     }
     .profile-page .profile_form-button__block {
@@ -989,6 +989,7 @@
 }
 @media ((max-width: 1300px)) {
     /* custom */
+
     .sighup-page .container {
         grid-template-columns: 1fr;
     }
@@ -1024,4 +1025,171 @@
     }
 }
 
+/* ---------------------------------- gift-card-page ---------------------------------- */
+.gift-card-page {
+}
+.gift-card-page .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.gift-card-page .gift-card-page__title-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.gift-card-page .button-back {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 20px;
+    border: 1px solid var(--black-Secondary);
+    border-radius: 8px;
+    transition: var(--transition-time);
+}
+.gift-card-page .button-back:hover {
+    border-color: var(--green);
+    color: var(--green);
+}
+.gift-card-page .button-back .icon-arrow__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.gift-card-page .button-back span {
+}
+.gift-card-page h1 {
+}
+.gift-card-page .icon-share {
+    font-size: 20px;
+    border: 1px solid var(--black-Secondary);
+    border-radius: 8px;
+    padding: 20px;
+    transition: var(--transition-time);
+}
+.gift-card-page .icon-share:hover {
+    border-color: var(--green);
+    color: var(--green);
+}
+.gift-card-page .gift-card-page__title-under {
+    text-align: center;
+    border-color: var(--green);
+    color: var(--black-promary);
+    max-width: 720px;
+
+    margin: 0 auto;
+}
+
+.gift-card-page__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+}
+.gift-card-page .form-radio__block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.gift-card-page .form-radio__block-title {
+    color: var(--black-promary);
+}
+
+.gift-card-page .form__block-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gift-card-page .form__block-group-name {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.gift-card-page .form__block-group-name .form__block:first-child {
+    grid-column: 1/3;
+    color: var(--black-promary);
+}
+.gift-card-page .form__block-group-name .form__block:nth-child(4) {
+    grid-column: 1/3;
+}
+.gift-card-page .form__block-group-card {
+    display: grid;
+    grid-template-columns: 1fr 120px 120px;
+    flex-wrap: nowrap;
+
+    gap: 20px;
+}
+.gift-card-page .form__block-group-card .form__block:first-child {
+    width: 100%;
+}
+.gift-card-page .form__block-group-card .form__block:nth-child(2) input,
+.gift-card-page .form__block-group-card .form__block:nth-child(3) input {
+    width: 100%;
+    text-align: center;
+}
+.gift-card-page .form__info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.gift-card-page .form__info .icon-lock {
+    font-size: 20px;
+}
+.gift-card-page .form__info span {
+    color: var(--black-promary);
+    font-weight: 400;
+}
+@media ((max-width: 1440px)) {
+}
+@media ((max-width: 1000px)) {
+    .gift-card-page .button-black {
+        width: 100%;
+    }
+}
+@media ((max-width: 560px)) {
+    .gift-card-page .container {
+        gap: 20px;
+    }
+    .gift-card-page .icon-share {
+        font-size: 16px;
+        padding: 15px;
+    }
+    .gift-card-page .button-back span {
+        display: none;
+    }
+    .gift-card-page .button-back {
+        padding: 15px;
+    }
+    .gift-card-page .button-back .icon-arrow__left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
+    .gift-card-page__form {
+        gap: 32px;
+    }
+    .gift-card-page .form__block-group-name {
+        grid-template-columns: 1fr;
+    }
+    .gift-card-page .form__block-group-name .form__block:first-child {
+        grid-column: auto;
+    }
+    .gift-card-page .form__block-group-name .form__block:nth-child(4) {
+        grid-column: auto;
+    }
+    .gift-card-page .form__block-group-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gift-card-page .form__block-group-card .form__block:first-child {
+        grid-column: 1/3;
+    }
+}
 /* ---------------------------------- profile-page ---------------------------------- */
