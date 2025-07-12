@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pageProfile = document.querySelector(".profile-page");
     const pageSighup = document.querySelector(".sighup-page");
     const pageSighin = document.querySelector(".sighin-page");
+    const giftCardPage = document.querySelector(".gift-card-page");
     if (pageProfile) {
         switcherLogic();
         dropdownLogic();
@@ -13,6 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (pageSighin) {
         sighinPageEyePasswordLogic();
+    }
+    if (giftCardPage) {
+        inputCardLogic();
+        selectLogic();
     }
 });
 function switcherLogic() {
@@ -139,5 +144,60 @@ function sighinPageEyePasswordLogic() {
     buttonSeePassword.addEventListener("click", () => {
         const isPassword = inputPassword.type === "password";
         inputPassword.type = isPassword ? "text" : "password";
+    });
+}
+function inputCardLogic() {
+    // Маска для номера карты
+    const cardInput = document.getElementById("card-number");
+    cardInput.addEventListener("input", () => {
+        let value = cardInput.value.replace(/\D/g, "");
+        value = value.slice(0, 16);
+        cardInput.value = value.replace(/(.{4})/g, "$1 ").trim();
+    });
+
+    // Маска для срока действия
+    const expiryInput = document.getElementById("card-expiry");
+    expiryInput.addEventListener("input", () => {
+        let value = expiryInput.value.replace(/\D/g, "");
+        if (value.length >= 3) {
+            value = value.slice(0, 4);
+            value = value.replace(/(\d{2})(\d{1,2})/, "$1/$2");
+        }
+        expiryInput.value = value;
+    });
+
+    // Ограничение CVC только цифрами
+    const cvcInput = document.getElementById("card-cvc");
+    cvcInput.addEventListener("input", () => {
+        cvcInput.value = cvcInput.value.replace(/\D/g, "").slice(0, 4);
+    });
+}
+function selectLogic() {
+    const selectBlocks = document.querySelectorAll(".select-custom");
+
+    selectBlocks.forEach((select) => {
+        const selected = document.querySelector(".select-selected");
+        const selectedSpan = selected.querySelector('span');
+        const optionsList = document.querySelector(".select-items");
+        selected.addEventListener("click", () => {
+            select.classList.toggle("select-active");
+        });
+
+        optionsList.addEventListener("click", (e) => {
+            if (e.target.matches("div[data-value]")) {
+                selectedSpan.textContent = e.target.textContent;
+                selected.setAttribute(
+                    "data-value",
+                    e.target.getAttribute("data-value")
+                );
+                select.classList.remove("select-active");
+            }
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!select.contains(e.target)) {
+                select.classList.remove("select-active");
+            }
+        });
     });
 }
