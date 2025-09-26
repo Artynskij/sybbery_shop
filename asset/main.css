@@ -438,16 +438,18 @@
     padding: 20px 20px 40px 20px;
 }
 .profile-page .order-item__head {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    align-items: center;
+    /* justify-content: space-between; */
+    grid-column-gap: 16px;
 }
 
-.profile-page .order-item__left {
+/* .profile-page .order-item__left {
     display: flex;
     align-items: center;
     gap: 40px;
-}
+} */
 
 .profile-page .order-item_date {
     display: flex;
@@ -475,10 +477,14 @@
 .profile-page .order-item_count span {
 }
 
-.profile-page .order-item__right {
+/* .profile-page .order-item__right {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 8px;
+} */
+.profile-page .order-item__photo-row {
+    display: flex;
+    gap: 8px;
 }
 .profile-page .order-item__history-image {
     width: 70px;
@@ -492,9 +498,13 @@
     width: 70px;
     height: 70px;
     background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 .profile-page .order-item_status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-page .order-item_status img {
@@ -666,10 +676,10 @@
     transform: rotate(180deg);
 }
 @media ((max-width: 1550px)) {
-    .profile-page .order-item__history-image,
+    /* .profile-page .order-item__history-image,
     .profile-page .order-item__history-count {
         display: none;
-    }
+    } */
 }
 @media ((max-width: 1440px)) {
     .profile-page .favorite-list {
@@ -1191,5 +1201,309 @@
     .gift-card-page .form__block-group-card .form__block:first-child {
         grid-column: 1/3;
     }
+}
+/* ---------------------------------- about-us-page ---------------------------------- */
+.about-page {
+}
+.about-page .banner {
+    background-color: var(--milk);
+}
+.about-page .banner-container {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: 5fr 3fr;
+    row-gap: 32px;
+    column-gap: 16px;
+}
+.about-page .banner .grid-one {
+    height: 100%;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.about-page .banner .grid-two {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: end;
+}
+
+.about-page .banner .grid-three {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* justify-content: space-around; */
+    height: 100%;
+    gap: 20px;
+    grid-column: 2;
+    grid-row: 2;
+}
+.about-page .banner-img {
+    border-radius: 8px;
+    overflow: hidden;
+}
+.about-page .banner-img img {
+    object-fit: cover;
+    height: 100%;
+}
+.about-page .banner-text {
+}
+.about-page .banner-text h1 {
+}
+
+.about-page .experience {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.about-page .experience-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+.about-page .experience-title span {
+    color: var(--green);
+}
+.about-page .experience-title h2 {
+    text-transform: uppercase;
+}
+.about-page .experience-content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    grid-template-areas:
+        "item1 item1 item2 item2 item3 item3"
+        "item4 item4 item4 item5 item5 item5";
+}
+.about-page .experience-content .card-experience:nth-child(1) {
+    grid-area: item1;
+}
+.about-page .experience-content .card-experience:nth-child(2) {
+    grid-area: item2;
+}
+.about-page .experience-content .card-experience:nth-child(3) {
+    grid-area: item3;
+}
+.about-page .experience-content .card-experience:nth-child(4) {
+    grid-area: item4;
+}
+.about-page .experience-content .card-experience:nth-child(5) {
+    grid-area: item5;
+}
+
+.about-page .card-experience {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: var(--milk);
+    padding: 32px;
+}
+.about-page .card-experience img {
+    margin-bottom: 24px;
+    border-radius: 8px;
+    /* height: 266px; */
+    aspect-ratio: 2.015;
+    width: 100%;
+    object-fit: cover;
+}
+.about-page .card-experience p {
+    margin-bottom: 16px;
+}
+.about-page .card-experience span {
+}
+
+.about-page .partner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+}
+.about-page .partner-title {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.about-page .partner-title h2 {
+}
+.about-page .partner-title .label {
+}
+.about-page .partner-title .label a {
+    display: contents;
+    color: var(--green);
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.about-page .partner-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.about-page .card-partner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--milk);
+    height: 240px;
+    width: 253px;
+    padding: 30px;
+    border-radius: 8px;
+}
+.about-page .card-partner img {
+}
+.about-page .faq {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.about-page .faq-title {
+    text-align: center;
+}
+@media ((max-width: 1440px)) {
+    .about-page .partner {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-page .partner-content {
+        align-self: flex-start;
+    }
+}
+@media ((max-width: 1100px)) {
+    .about-page .banner-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        row-gap: 32px;
+        column-gap: 16px;
+        row-gap: 0;
+        column-gap: 0;
+    }
+    .about-page .banner .grid-one {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .about-page .banner .grid-two {
+        margin-bottom: 16px;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .about-page .banner .grid-three {
+        margin-bottom: 40px;
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .about-page .experience {
+        gap: 40px;
+    }
+    .about-page .experience-content {
+        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-areas:
+            "item1 item1 item2 item2 "
+            "item3 item3 item4 item4 "
+            "item5 item5 item5 item5";
+    }
+    .about-page .partner-content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .about-page .card-partner {
+        width: 100%;
+    }
+    .about-page .card-partner:nth-child(3) {
+        grid-column: span 2;
+    }
+    .about-page .faq {
+        gap: 40px;
+    }
+}
+@media ((max-width: 560px)) {
+    .about-page .banner .grid-one {
+        margin-bottom: 32px;
+        grid-row: 2;
+    }
+    .about-page .banner .grid-two {
+        margin-bottom: 32px;
+        grid-row: 1;
+    }
+    .about-page .banner .grid-three {
+        margin-bottom: 0;
+        grid-row: 3;
+    }
+    .about-page .experience-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-page .card-experience img {
+        /* height: 142px; */
+    }
+    .about-page .partner-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-page .card-partner {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+    .about-page .card-partner img {
+        width: 200px;
+        height: auto;
+    }
+}
+/* ---------------------------------- brands-page ---------------------------------- */
+.brands-page {
+}
+.brands-page .section-brands {
+}
+.brands-page .container {
+}
+.brands-page .slider-brands {
+    position: relative;
+}
+.brands-page .swiper-brands {
+    /* position: relative; */
+    position: initial;
+    margin: 0 80px;
+    /* min-height: 200px; */
+}
+.brands-page .swiper-brands .arrow-prev,
+.brands-page .swiper-brands .arrow-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    border: 1px solid var(--black-Secondary);
+    transform: translate(0, -50%);
+    font-size: 10px;
+    border-radius: 8px;
+    z-index: 2;
+    cursor: pointer;
+}
+.brands-page .swiper-brands .arrow-prev {
+    left: 0;
+}
+.brands-page .swiper-brands .arrow-next {
+    right: 0;
+}
+.brands-page .card-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.brands-page .card-brand img {
+    border-radius: 8px;
+}
+.brands-page .card-brand span {
+}
+@media ((max-width: 1440px)) {
+}
+@media ((max-width: 1000px)) {
+}
+@media ((max-width: 560px)) {
 }
 /* ---------------------------------- profile-page ---------------------------------- */

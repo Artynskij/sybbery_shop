@@ -50,6 +50,9 @@
 .icon-profile:before {
     content: "\e902";
 }
-.icon-arrow__left{
+.icon-arrow__left {
     transform: rotate(-90deg);
+}
+.icon-arrow__right {
+    transform: rotate(90deg);
 }
