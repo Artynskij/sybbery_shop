@@ -3,10 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const pageSighup = document.querySelector(".sighup-page");
     const pageSighin = document.querySelector(".sighin-page");
     const giftCardPage = document.querySelector(".gift-card-page");
+    const brandsPage = document.querySelector(".brands-page");
     if (pageProfile) {
         switcherLogic();
         dropdownLogic();
         profilePageButtonLogic();
+        // Запускаем при загрузке и при ресайзе
+        window.addEventListener("load", updateVisiblePhotosLogic);
+        window.addEventListener("resize", updateVisiblePhotosLogic);
     }
     if (pageSighup && !pageSighin) {
         sighupPageButtonLogic();
@@ -18,6 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (giftCardPage) {
         inputCardLogic();
         selectLogic();
+    }
+    if (brandsPage) {
+        sliderLogic();
     }
 });
 function switcherLogic() {
@@ -177,7 +184,7 @@ function selectLogic() {
 
     selectBlocks.forEach((select) => {
         const selected = document.querySelector(".select-selected");
-        const selectedSpan = selected.querySelector('span');
+        const selectedSpan = selected.querySelector("span");
         const optionsList = document.querySelector(".select-items");
         selected.addEventListener("click", () => {
             select.classList.toggle("select-active");
@@ -199,5 +206,69 @@ function selectLogic() {
                 select.classList.remove("select-active");
             }
         });
+    });
+}
+function sliderLogic() {
+    const swiperStaff = new Swiper(".swiper-brands", {
+        direction: "horizontal",
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 32,
+        speed: 500,
+        breakpoints: {
+            560: {
+                slidesPerView: 1,
+                // spaceBetween: 40,
+            },
+            1000: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1440: {
+                slidesPerView: 3,
+                spaceBetween: 22,
+            },
+        },
+        navigation: {
+            nextEl: ".swiper-brands-button-next",
+            prevEl: ".swiper-brands-button-prev",
+        },
+    });
+}
+//
+function updateVisiblePhotosLogic() {
+    const rows = document.querySelectorAll(".photo-row");
+
+    rows.forEach((row) => {
+        const maxVisible = parseInt(row.getAttribute("data-max-visible")) || 8;
+        // Ищем только изображения с классом order-item__history-image
+        const photos = row.querySelectorAll("img.order-item__history-image");
+        const countElement = row.querySelector(".remaining-count");
+
+        // Если элемент для отображения количества не найден, ищем альтернативные варианты
+        const remainingCountElement =
+            countElement || row.querySelector(".order-item__history-count");
+
+        if (photos.length <= maxVisible) {
+            if (remainingCountElement)
+                remainingCountElement.style.display = "none";
+            // Показываем все фото, если они вмещаются
+            photos.forEach((photo) => {
+                photo.style.display = "block";
+            });
+            return;
+        }
+
+        // Скрываем лишние фото и показываем только нужное количество
+        photos.forEach((photo, index) => {
+            photo.style.display = index < maxVisible ? "block" : "none";
+        });
+
+        if (remainingCountElement) {
+            remainingCountElement.textContent = `+${
+                photos.length - maxVisible
+            }`;
+            remainingCountElement.style.display = "flex"; // или "block" в зависимости от вашего CSS
+        }
     });
 }

@@ -275,6 +275,11 @@ input {
     font-size: 32px;
     line-height: 44px;
 }
+.text52 {
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 64px;
+}
 .text12 {
     font-weight: 400;
 
@@ -293,6 +298,12 @@ input {
     font-size: 16px;
     line-height: 24px;
 }
+.text20 {
+    color: var(--black-promary);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+}
 .text24 {
     color: var(--black-promary);
     font-weight: 400;
@@ -310,7 +321,11 @@ input {
     section {
         padding: 20px 0;
     }
-
+    .text52 {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 44px;
+    }
     .container {
         padding: 0 20px;
     }
