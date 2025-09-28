@@ -298,6 +298,12 @@ input {
     font-size: 16px;
     line-height: 24px;
 }
+.text18 {
+    color: var(--black-promary);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+}
 .text20 {
     color: var(--black-promary);
     font-weight: 600;
