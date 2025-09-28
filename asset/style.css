@@ -298,6 +298,12 @@ input {
     font-size: 16px;
     line-height: 24px;
 }
+.text18 {
+    color: var(--black-promary);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+}
 .text20 {
     color: var(--black-promary);
     font-weight: 600;
@@ -398,6 +404,29 @@ input {
 
 /* colors */
 
+/* ---------------------------------- slider ---------------------------------- */
+.slider-arrow-prev,
+.slider-arrow-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    /* position: absolute; */
+    /* top: 50%; */
+    border: 1px solid var(--black-Secondary);
+    /* transform: translate(0, -50%); */
+    font-size: 10px;
+    border-radius: 8px;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.slider-arrow-prev:hover,
+.slider-arrow-next:hover {
+    border-color: var(--green);
+    color: var(--green);
+}
 /* ---------------------------------- header ---------------------------------- */
 .nav {
     display: flex;
