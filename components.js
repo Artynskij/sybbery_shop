@@ -212,26 +212,38 @@ function sliderLogic() {
     const swiperStaff = new Swiper(".swiper-brands", {
         direction: "horizontal",
         loop: true,
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 32,
         speed: 500,
         breakpoints: {
             560: {
-                slidesPerView: 1,
+                slidesPerView: 2,
                 // spaceBetween: 40,
             },
             1000: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 20,
             },
             1440: {
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 22,
             },
         },
         navigation: {
             nextEl: ".swiper-brands-button-next",
             prevEl: ".swiper-brands-button-prev",
+        },
+    });
+    const swiperNavigation = new Swiper(".swiper-navigation", {
+        direction: "horizontal",
+        loop: false,
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        speed: 500,
+
+        navigation: {
+            nextEl: ".swiper-navigation-button-next",
+            prevEl: ".swiper-navigation-button-prev",
         },
     });
 }
