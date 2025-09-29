@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const pageSighin = document.querySelector(".sighin-page");
     const giftCardPage = document.querySelector(".gift-card-page");
     const brandsPage = document.querySelector(".brands-page");
+    const faqPage = document.querySelector(".faq-page");
+    const helpPage = document.querySelector(".help-page");
     if (pageProfile) {
         switcherLogic();
         dropdownLogic();
@@ -25,6 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (brandsPage) {
         sliderLogic();
+    }
+    if (faqPage) {
+        switcherLogic();
+    }
+    if (helpPage) {
+        switcherLogic();
     }
 });
 function switcherLogic() {

@@ -18,7 +18,7 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
         />
-        <title>sellGoods</title>
+        <title>FAQ</title>
     </head>
     <body>
         <header class="container mb-header">
@@ -121,20 +121,57 @@
                 </ul>
             </div>
         </header>
-        <main class="sellGoods-page">
+        <main class="faq-page">
             <section>
                 <div class="container">
-                    <div class="sellGoods-content text24">
-                        Interested in joining the Gooseberry producer
-                        community?<br />
-                        Review our detailed
-                        <span><a href="#">food standards</a></span> and if it
-                        sounds like you, we encourage you to email
-                        <span
-                            ><a href="mailto:email@gooseberry.com"
-                                >email@gooseberry.com.</a
-                            ></span
+                    <div class="switcher">
+                        <div
+                            tab-key="category 1"
+                            active-tab__key
+                            class="switcher-item"
                         >
+                            <span class="text-links">category 1</span>
+                        </div>
+                        <div tab-key="category 2" class="switcher-item">
+                            <span class="text-links">category 2</span>
+                        </div>
+                        <div tab-key="category 3" class="switcher-item">
+                            <span class="text-links">category 3</span>
+                        </div>
+                    </div>
+                    <div
+                        tab-content="category 1"
+                        active-tab__content
+                        class="switcher-content"
+                    >
+                        <div class="faq-content">
+                            <div class="faq-content__title text-title">
+                                Section 1
+                            </div>
+                            <div class="faq-content__content">
+                                <h1>FAQ CONTENT 1</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div tab-content="category 2" class="switcher-content">
+                        <div class="faq-content">
+                            <div class="faq-content__title text-title">
+                                Section 1
+                            </div>
+                            <div class="faq-content__content">
+                                <h1>FAQ CONTENT 2</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div tab-content="category 3" class="switcher-content">
+                        <div class="faq-content">
+                            <div class="faq-content__title text-title">
+                                Section 1
+                            </div>
+                            <div class="faq-content__content">
+                                <h1>FAQ CONTENT 3</h1>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -195,5 +232,6 @@
                 <div style="opacity: 0.4">Made by Luwak.IT</div>
             </div>
         </footer>
+        <script src="../components.js"></script>
     </body>
 </html>
