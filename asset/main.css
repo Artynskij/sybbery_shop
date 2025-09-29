@@ -1974,27 +1974,40 @@
     flex-direction: column;
     gap: 40px;
 }
+
 .help-page .search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     width: 600px;
     margin: 0 auto;
-}
-
-.help-page .search input {
     font-weight: 400;
     padding: 18px 20px;
     border-radius: 8px;
     border: 1px solid var(--black-Secondary);
     background-color: var(--chalk);
     transition: var(--transition-time);
+    /* width: 100%; */
+}
+.help-page .search:hover {
+    border-color: var(--green);
+}
+/* .help-page .search:focus {
+    border-color: var(--green);
+} */
+.help-page .search .icon-search {
+    font-size: 19px;
+    cursor: pointer;
+}
+.help-page .search:has(input:focus) {
+    border-color: var(--green);
+}
+.help-page .search input {
     width: 100%;
-}
-.help-page .search input:hover {
-    border-color: var(--green);
-}
-.help-page .search input:focus {
-    border-color: var(--green);
+
     outline: none;
 }
+
 .help-page .help-body {
     display: flex;
     gap: 60px;
@@ -2115,4 +2128,131 @@
     }
 }
 
+/* ---------------------------------- article-page ---------------------------------- */
+.article-page {
+}
+.article-page .container {
+    display: flex;
+    gap: 60px;
+}
+
+.article-page .switcher {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.article-page .switcher-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 20px;
+    min-width: 280px;
+    color: var(--black-promary);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition-time);
+    text-transform: uppercase;
+}
+
+.article-page .switcher-item:hover {
+    transform: scale(1.02);
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.article-page .switcher-item[active-tab__key] {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.article-page .switcher-item span {
+    text-wrap: nowrap;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.article-page .switcher-content {
+    display: none;
+    width: 100%;
+}
+
+.article-page .switcher-content[active-tab__content] {
+    display: block;
+}
+
+.article {
+    max-width: 1056px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.article .article-banner {
+    min-height: 178px;
+}
+.article h1 {
+}
+.article .article-user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.article .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.article .user-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 3px;
+}
+.article .user-name {
+}
+.article .user-status {
+    color: rgba(34, 34, 34, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.article .user-status .circle {
+    width: 2px;
+    height: 2px;
+    background-color: rgba(34, 34, 34, 0.4);
+}
+
+.article .article-content {
+}
+.article .article-content p {
+    margin: 20px 0;
+}
+.article .article-content p:first-child {
+    margin-top: 0;
+}
+@media ((max-width: 1440px)) {
+}
+
+@media ((max-width: 1000px)) {
+    .article-page .container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .article-page .switcher {
+        display: none;
+        flex-direction: row;
+        overflow: auto;
+        padding-bottom: 5px;
+    }
+
+    .article-page .switcher-item {
+        min-width: fit-content;
+    }
+}
+@media ((max-width: 560px)) {
+}
 /* ---------------------------------- profile-page ---------------------------------- */
