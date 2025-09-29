@@ -1,11 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article</title>
-</head>
-<body>
-    Art
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../styles.css" />
+        <link rel="stylesheet" href="../asset/style.css" />
+        <link rel="stylesheet" href="../asset/main.css" />
+
+        <link rel="stylesheet" href="../icon-font/icon-font.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
+        <title>Article</title>
+    </head>
+    <body>
+        <header class="container mb-header">
+            <button class="burger-menu" id="burger">
+                <img src="../image/Menu.png" alt="Menu" />
+            </button>
+
+            <nav class="nav top-nav">
+                <ul class="nav-links">
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">BUY A GIFT CARD</a></li>
+                    <li><a href="#">MEMBERSHIP</a></li>
+                    <li><a href="#">FOR YOU</a></li>
+                    <li><a href="#">SHOPPING FOR TODAY IN 90039</a></li>
+                </ul>
+                <button class="login-btn">LOGIN</button>
+            </nav>
+
+            <img class="header-logo" src="../image/header-logo.png" />
+
+            <nav class="nav bottom-nav">
+                <ul class="nav-links">
+                    <li><a href="#">PANTRY</a></li>
+                    <li><a href="#">SNACKS</a></li>
+                    <li><a href="#">BAKERY</a></li>
+                    <li><a href="#">PRODUCE</a></li>
+                    <li><a href="#">FROZEN</a></li>
+                    <li><a href="#">SANDWICHES</a></li>
+                    <li><a href="#">HEALTH & HOME</a></li>
+                    <li><a href="#">DAIRY & EGGS</a></li>
+                    <li><a href="#">MEAT & FISH</a></li>
+                    <li><a href="#">BEVERAGES</a></li>
+                </ul>
+
+                <div class="icons">
+                    <a href="#"
+                        ><img src="../image/Search.png" alt="Search"
+                    /></a>
+                    <a href="#"><img src="../image/like.png" alt="like" /></a>
+                    <a href="#"
+                        ><img
+                            src="../image/shopping_bag.png"
+                            alt="shopping_bag"
+                    /></a>
+                </div>
+            </nav>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-header">
+                    <button class="mobile-menu-btn">LOGIN</button>
+                    <button class="mobile-menu-btn">
+                        <img src="../image/like-white.png" alt="like" />
+                    </button>
+                    <button class="mobile-menu-btn">
+                        <img src="../image/shopping-bag-white.png" alt="" />
+                    </button>
+                    <button class="close-menu" id="closeMenu">
+                        <img src="../image/Close.png" alt="Close" />
+                    </button>
+                </div>
+
+                <h4>Shopping for <b>Today</b> in <b>90039</b></h4>
+
+                <div class="mobile-menu-list-header">
+                    <p>MARKET</p>
+                    <img src="../image/Arrow-up.png" alt="Arrow-up" />
+                </div>
+
+                <ul class="mobile-menu-list">
+                    <li><a href="#">Deals for days</a></li>
+                    <li><a href="#">Fresh Picks</a></li>
+                    <li><a href="#">Buy a Gift Card</a></li>
+                    <li><a href="#">Pantry</a></li>
+                    <li><a href="#">Snacks</a></li>
+                    <li><a href="#">Bakery</a></li>
+                    <li><a href="#">Produce</a></li>
+                    <li><a href="#">Sandwiches</a></li>
+                    <li><a href="#">Health & home</a></li>
+                    <li><a href="#">Dairy & eggs</a></li>
+                    <li><a href="#">Meat & Fish</a></li>
+                    <li><a href="#">Beverages</a></li>
+                </ul>
+
+                <div class="devider"></div>
+
+                <div class="mobile-menu-list-header">
+                    <p>HELP CENTER</p>
+                    <img src="../image/Arrow-down.png" alt="Arrow-down" />
+                </div>
+
+                <div class="devider"></div>
+
+                <ul class="nav-links-burger">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Buy a gift card</a></li>
+                    <li><a href="#">Membership</a></li>
+                    <li><a href="#">For you</a></li>
+                </ul>
+            </div>
+        </header>
+        <main class="article-page">
+            <section>
+                <div class="container">
+                    <div class="switcher">
+                        <div class="text-title">Articles in this section</div>
+                        <div
+                            tab-key="article 1"
+                            active-tab__key
+                            class="switcher-item"
+                        >
+                            <span class="text-links">article 1</span>
+                        </div>
+                    </div>
+                    <div class="article-page__content">
+                        <div
+                            tab-content="article 1"
+                            active-tab__content
+                            class="switcher-content"
+                        >
+                            <div class="article">
+                                <img
+                                    class="article-banner"
+                                    src="../image/article-banner.png"
+                                    alt="article-banner"
+                                />
+                                <h1>What is Gooseberry?</h1>
+                                <div class="article-user">
+                                    <img
+                                        class="user-avatar"
+                                        src="../image/article-avatar.jpg"
+                                        alt="avatar"
+                                    />
+
+                                    <div class="user-text text16">
+                                        <div class="user-name">Christina</div>
+                                        <div class="user-status">
+                                            <span>3 years ago</span>
+                                            <span class="circle"></span>
+                                            <span>Updated</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="article-content text16">
+                                    <p>
+                                        Gooseberry is a pioneering online grocer
+                                        delivering absurdly fresh groceries to
+                                        families throughout the San Francisco
+                                        Bay Area and Los Angeles. We believe
+                                        good food shouldn’t come with a tradeoff
+                                        — be it your time, the quality you get,
+                                        or your wallet. We designed a new way to
+                                        get the best quality food that gives you
+                                        more time back and puts more money in
+                                        the hands of the people who making it
+                                        the right way — all at a price that’s
+                                        the same or less than the grocery
+                                        store. 
+                                    </p>
+                                    <p>
+                                        Gooseberry is a pioneering online grocer
+                                        delivering absurdly fresh groceries to
+                                        families throughout the San Francisco
+                                        Bay Area and Los Angeles. We believe
+                                        good food shouldn’t come with a tradeoff
+                                        — be it your time, the quality you get,
+                                        or your wallet. We designed a new way to
+                                        get the best quality food that gives you
+                                        more time back and puts more money in
+                                        the hands of the people who making it
+                                        the right way — all at a price that’s
+                                        the same or less than the grocery
+                                        store. 
+                                    </p>
+                                    <p>
+                                        Gooseberry is a pioneering online grocer
+                                        delivering absurdly fresh groceries to
+                                        families throughout the San Francisco
+                                        Bay Area and Los Angeles. We believe
+                                        good food shouldn’t come with a tradeoff
+                                        — be it your time, the quality you get,
+                                        or your wallet. We designed a new way to
+                                        get the best quality food that gives you
+                                        more time back and puts more money in
+                                        the hands of the people who making it
+                                        the right way — all at a price that’s
+                                        the same or less than the grocery
+                                        store. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer container">
+            <div class="footer-top">
+                <div class="footer-top-left">
+                    <div class="contacts-links">
+                        <div class="links-img">
+                            <img
+                                src="../image/facebook_fill.png"
+                                alt="facebook_fill"
+                            />
+                            <img
+                                src="../image/instagram_fill.png"
+                                alt="instagram_fill"
+                            />
+                        </div>
+                        <div class="contact-num">+1 111 111 11-11</div>
+                        <p class="contact-info">Contact us anytime</p>
+                    </div>
+                    <div class="footer-menu-list-box">
+                        <ul class="footer-menu-list">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Buy a Gift Card</a></li>
+                            <li><a href="#">Fresh Picks</a></li>
+                        </ul>
+
+                        <ul class="footer-menu-list">
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Sell Your Goods</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-top-right">
+                    <img src="../image/play-store.png" alt="play" />
+                    <img src="../image/istore.png" alt="istore" />
+                </div>
+            </div>
+
+            <div class="footer-midle">
+                <div>gooseberry</div>
+                <img src="../image/fdhn.svg" alt="star" />
+                <div>goods</div>
+            </div>
+
+            <div class="meta-info">
+                <ul class="meta-list">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Return of goods</a></li>
+                    <li><a href="#">Food Allergy Disclaimer </a></li>
+                </ul>
+                <div style="opacity: 0.4">Made by Luwak.IT</div>
+            </div>
+        </footer>
+        <script src="../components.js"></script>
+    </body>
 </html>
